@@ -99,10 +99,58 @@
 
 
 ### EJERCICIO-5
-#### ***DCT***
+#### ***Python Script***
 
-<p align="justify">Con el fin de poder realizar todos los ejercicios anteriores, procedí a buscar la forma de ejecutar desde el fichero python un comando como si fuera el terminal y poder usar <em>ffmpeg</em>. Para ello me ayudé de la conversación de la página <em>StackOverflow</em>:</p><p align="center"><em><strong>subprocess.run</strong>(f"<strong>Comando FFmpeg</strong>", shell=True)</em></p><p align="justify">Donde si nosotros colocamos dentro de ese espacio marcado el comando que anteriormente poníamos desde el terminal, se realizará el mismo proceso y obtendremos los resultados para cada uno de los ejercicios.</p><p align="justify">Fuente:<br>https://stackoverflow.com/questions/59279463/how-to-cut-video-properly-with-this-ffmpeg-python-script</p>
+<p align="justify">Con el fin de poder realizar todos los ejercicios anteriores, procedí a buscar la forma de ejecutar desde el fichero python un comando como si fuera el terminal y poder usar <em>ffmpeg</em>. Para ello me ayudé de la conversación de la página <em>StackOverflow</em>:</p><p align="center"><em><strong>subprocess.run</strong>(f"<strong>Comando FFmpeg</strong>", shell=True)</em></p><p align="justify">Donde si nosotros colocamos dentro de ese espacio marcado el comando que anteriormente poníamos desde el terminal, se realizará el mismo proceso y obtendremos los resultados para cada uno de los ejercicios. Cabe decir que lo que nos permite ejecutar estos comandos es la función <em>run</em> de la libreria <em>subprocess</em>. </p><p align="justify">Fuente:<br>https://stackoverflow.com/questions/59279463/how-to-cut-video-properly-with-this-ffmpeg-python-script</p>
 
+```python
+import subprocess
+
+NOV = 'BBB' #Name Original Video
+```
+<p align="justify">Importamos la librería <em>subprocess</em> y creamos una variable con el nombre del video original a partir del cual realizar todos los ejercicios. Cabe decir que el primer ejercicio se realizará a partir del original propuesto, pero el segundo, tercero y cuarto se realizarán a partir del video de 10 segundos resultante del ejericio 1. </p>
+
+```python
+####################### EJERCICIO-1 ################################
+time_start = '00:07:05.0'
+time_video = '00:00:10.0'
+subprocess.run(f"ffmpeg -ss {time_start} -i EJERCICIO-5/{NOV}.mp4 -c copy -t {time_video} EJERCICIO-5/{NOV}_10s.mp4", shell=True)
+
+```
+<p align="justify">Para el primer ejercicio creamos dos variables, una para asignar en que tiempo empezar a hacer el recorte del video, y la segunda para decidir la duración del video final recortado. </p>
+
+```python
+
+####################### EJERCICIO-2 ################################
+
+subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -vf split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay EJERCICIO-5/YUVhisto_{NOV}.mp4", shell=True)
+
+```
+<p align="justify">En el segundo ejericio, tan solo procesamos el comando a partir del video resultante del ejercicio 1. </p>
+
+```python
+
+####################### EJERCICIO-3 ################################
+
+scaleValue = ["1280:720","640:480","360:240","160:120"]
+nameVideo = ["1280x720","640x480","360x240","160x120"]
+for i in range(len(scaleValue)):
+
+    subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -vf scale={scaleValue[i]} EJERCICIO-5/{NOV}_{nameVideo[i]}.mp4 ", shell=True)
+
+```
+<p align="justify">Para el ejericio 3, creamos dos variables:<br><strong><em>- ScaleValue:</em></strong> Una array que contiene todos los distintos tipos de escala que queremos realizar.<br><strong><em>- nameVideo:</em></strong> Para colocar el nombre correspondiente al fichero final después de hacer el escalado del video. </p>
+
+```python
+
+####################### EJERCICIO-4 ################################
+
+subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -ac 1 EJERCICIO-5/mono-{NOV}_10s.mp4", shell=True)
+subprocess.run(f"ffmpeg -i EJERCICIO-5/mono-{NOV}_10s.mp4 -acodec mp3 -vcodec copy EJERCICIO-5/mono-mp3-{NOV}_10s.mp4", shell=True)
+```
+<p align="justify">Para el ejericio 4, tan solo ejecutamos primero el comadno para pasar de audio multicanal a mono y posteriormente cambiamos el codec del audio a mp3.</p>
+
+##### **Script**
 ```python
 import subprocess
 
@@ -131,5 +179,4 @@ subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -ac 1 EJERCICIO-5/mono-{NOV
 subprocess.run(f"ffmpeg -i EJERCICIO-5/mono-{NOV}_10s.mp4 -acodec mp3 -vcodec copy EJERCICIO-5/mono-mp3-{NOV}_10s.mp4", shell=True)
 ```
 
-
-<p align="justify">COMENT_RESULTADOS</p>
+<p align="justify">Si ejecutamos este código en un fichero python veremos que al momento empiezan a aparecer los resultados de cada uno de los procesos en la carpeta donde se ha ejecutado el script.</p>
