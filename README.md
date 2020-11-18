@@ -19,7 +19,7 @@
 <p align="justify">En el video final podemos ver que dura 10 segundos y que hace referencia al minuto 00:07:05 del video original. </p>
 
 ### EJERCICIO-2
-#### ***Resize Images***
+#### ***YUV Histogram***
 
 <p align="justify">Nuevamente mediante un comando usando <em>ffmpeg</em> procedemos a realizar el histograma YUV y plotearlo sobre la misma imagen o video. Para ello utilicé el comando dado por la misma página de <em>FFmpeg</em>:</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histo_BBB.mp4</em></p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/Histogram</p>
 
@@ -35,14 +35,13 @@
 <p align="justify">En el resultado vemos el histograma de las tres componentes de YUV (Y, Cb y Cr). Donde Y nos informa sobre la luminancia, es decir información en blanco y negro, por esa razón la barra de color debajo del histograma que representa la Y esta en escala de grises. Vemos también el histograma de las componentes Cb y Cr, que hacen referencia a la crominancia, es decir, la información sobre el color. </p>
 
 ### EJERCICIO-3
-#### ***Image into b/w***
+#### ***Resize the BBB(10s) video***
 
-<p align="justify">De igual modo que en el caso anterior, busqué en internet qué comando nos permitía usar <em>ffmpeg</em> para poder binarizar la imagen con color blanco y negro tal y como se pedía en el enunciado b/w (black/white). Para ello utilizé el comando que hacía referencia a un filtro llamado <em>threshold</em> que permite binarizar la imagen: <em>https://ffmpeg.org/ffmpeg-filters.html#threshold</em> -> "<em>ffmpeg -i 320_240_original.png -f lavfi -i color=gray -f lavfi -i color=black -f lavfi -i color=white -lavfi threshold b_w.png</em>"</p>
-<p align="justify">A continuación muestro los resultados: </p>
+<p align="justify">TEXTO</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -vf scale=<strong>1280:720</strong> 1280x720.mp4</em></p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/Scaling</p>
 
 ##### **Comando + Terminal**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-3/ejercicio_3.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="400"/>
 </p>
 
 ##### **Resultados**
