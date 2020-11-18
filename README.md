@@ -37,7 +37,7 @@
 ### EJERCICIO-3
 #### ***Resize the BBB(10s) video***
 
-<p align="justify">TEXTO</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -vf scale=<strong>1280:720</strong> 1280x720.mp4</em></p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/Scaling</p>
+<p align="justify">Igual que en la práctica 1, cuando realizamos la reducción de calidad de las imágenes con una reducción de escala, para el caso del video, usaremos el mismo comando, pero en vez de pasar una imagen al comando, le pasamos un video. </p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -vf scale=<strong>1280:720</strong> 1280x720.mp4</em></p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/Scaling</p>
 
 ##### **Comando + Terminal**
 <p align="center">
@@ -46,12 +46,12 @@
 
 ##### **Resultados**
 
-<p align="center">
-  <img src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-3/320_240_original.png" width="350">
-  <img src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-3/b_w.png" width="350">
-</p>
+<p align="center"> Link resultado del video 1280X720 (Mi Youtube): https://youtu.be/-zjsgdHLAMk</p>
+<p align="center"> Link resultado del video 640X480 (Mi Youtube): https://youtu.be/qdyaH8BuRuA</p>
+<p align="center"> Link resultado del video 360X240 (Mi Youtube): https://youtu.be/oTOrATpGNek</p>
+<p align="center"> Link resultado del video 160X120 (Mi Youtube): https://youtu.be/qquzqcsQgkA</p>
 
-<p align="justify">Si nos fijamos en la imagen de color, podemos ver que aquellas partes que ésta tiene más claras o blancas son las que se traducen en la imagen b/w en blanco (1). En cambio aquellas que tiene un color más apagado u oscuro, pasan a ser negro (0). Esto se debe al threshold, si de la imagen original el valor de ese pixel esta por encima de un cierto límite pasan a ser 0 o 1.</p>
+<p align="justify">Como podemos ver en los distintos videos, a medida que reducimos la resolución de éstos, la calidad también lo hace.</p>
 
 ### EJERCICIO-4
 #### ***Run-lenght encoding***
