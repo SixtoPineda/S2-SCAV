@@ -13,9 +13,9 @@
 </p>
 
 ##### **Resultados**
-<p align="center">
-  <video src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-1/BBB_10s.mp4" width="600" >
-</p>
+
+
+<p align="center"> Link resultado del video (Mi Youtube): https://youtu.be/WndicksBocw</p>
 
 
 <p align="justify">En el video final podemos ver que dura 10 segundos y que hace referencia al minuto 00:07:05 del video original. </p>
