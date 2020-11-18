@@ -92,8 +92,8 @@
 ##### **Resultados**
 
 <p align="center"> Video con audio original (Mi Youtube): https://youtu.be/WndicksBocw</p>
-<p align="center"> Link resultado del video con canal audio mono (Mi Youtube): https://youtu.be/-zjsgdHLAMk</p>
-<p align="center"> Link resultado del video con canal audio mono y diferente audio codec (MP3) (Mi Youtube): https://youtu.be/qdyaH8BuRuA</p>
+<p align="center"> Link resultado del video con canal audio mono (Mi Youtube): https://youtu.be/WYFJUyrX-4A</p>
+<p align="center"> Link resultado del video con canal audio mono y diferente audio codec (MP3) (Mi Youtube): https://youtu.be/wAuYziIrgJw</p>
 
 <p align="justify">Como podemos escuchar, si comparamos el video original con el que tiene un único canal, se aprecia claramente con auriculares como se pierde esa sensación espacial que nos da el audio multicanal 5.1 surround que tenia el video original, como hemos podido ver en la captura de las propiedades el video.<br>En cambiar también el tipo de codificación del audio, las diferencias apenas son notorias.</p>
 
@@ -101,47 +101,11 @@
 ### EJERCICIO-5
 #### ***DCT***
 
-<p align="justify">La DCT (<em>Discrete Cosine Transform</em>) se caracteriza por tener una buena capacidad de concentración o compactación de la energía o la información en pocos coeficientes a diferencia de otros métodos como la DFT. Principalmente lo que hace es separar la imagen en partes con distintas frecuencias y procede a realizar la cuantización donde se realiza una compresión y las frecuencias menos relevantes o importantes son descartadas. Cabe destacar que el algoritmo no cambia los datos que recibe a diferencia de otros algoritmos que sí lo hacen.<br> En python esa función ya está implementada mediante el paquete <em>scipy</em>. Por ello al iniciar el script importamos ambas funciones, la DCT y la IDCT, a más de importar funciones como <em>imread</em> para poder leer la imagen a la que aplicar la DCT.<br>Dado que queremos aplicar la DCT a una imagen (2D), nos encontramos en un espacio bidimensional, por lo tanto, al usar las funciones <em>dct2()</em> y <em>idct2()</em> deberemos aplicar la DCT dos veces, para cada una de las dimensiones.<br>Cargaremos la imegen, le aplicaremos la DCT, la IDCT y posteriormente veremos el resultado final. </p><p align="justify">Fuente:<br>https://stackoverflow.com/questions/7110899/how-do-i-apply-a-dct-to-an-image-in-python</p>
-
-
+<p align="justify">TEXTO</p><p align="justify">Fuente:<br>https://stackoverflow.com/questions/59279463/how-to-cut-video-properly-with-this-ffmpeg-python-script</p>
 
 ```python
-from scipy.fftpack import dct, idct
-
-from skimage.io import imread
-from skimage.color import rgb2gray
-import numpy as np
-import matplotlib.pylab as plt
-
-##################### DCT & IDCT (2D)########################
-# 2D DCT
-def dct2(a):
-    return dct(dct(a.T, norm='ortho').T, norm='ortho')
-
-# 2D IDCT
-def idct2(a):
-    return idct(idct(a.T, norm='ortho').T, norm='ortho')
-
-#########################################################
-
-
-# leemos una imagen RGB y la pasamos a grayscale
-im = rgb2gray(imread('EJERCICIO-5/original.png'))
-#DCT
-im_DCT = dct2(im)
-#IDCT
-im_IDCT = idct2(im_DCT)
-
-#comprobación de que se asemejan ambas imágenes
-assert(np.allclose(im, im_IDCT) == True)
-
-# plot de la imagen original y la reconstruida
-plt.gray()
-plt.subplot(121), plt.imshow(im), plt.axis('off'), plt.title('Original image', size=20)
-plt.subplot(122), plt.imshow(im_IDCT), plt.axis('off'), plt.title('Reconstructed image (DCT+IDCT)', size=20)
-plt.show()
+CÓDIGO
 ```
-![](https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-5/Reconstructed_image(DCT%2BIDCT).png)
-> Resultado.
 
-<p align="justify">A simple vista no podemos ver o apreciar apenas ningún cambio, a más de que en realizar una comparación entre el resultado y la imagen original podemos ver que no estan muy lejos entre ellas. </p>
+
+<p align="justify">COMENT_RESULTADOS</p>
