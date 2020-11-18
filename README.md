@@ -65,13 +65,13 @@
 ##### **Antes y después de cambiar tipo de canal y codificación del audio**
 ###### **Antes**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/ver_audio_codec_original.png" width="800"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/propiedades_original.png" width="500" high="700"/>
 </p>
 
 ###### **Después**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/result_final.png" width="800"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/propiedades_mono_mp3_final.png" width="500" high="700"/>
 </p>
 
 ##### **Comandos**
