@@ -72,10 +72,13 @@
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
 </p>
+
 ###### **Después**
+
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
 </p>
+
 ##### **Resultados**
 
 <p align="center"> Video con audio original (Mi Youtube): https://youtu.be/WndicksBocw</p>
