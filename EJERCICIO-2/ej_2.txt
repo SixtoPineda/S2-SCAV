@@ -1,7 +1,0 @@
-COMANDO: ffmpeg -i BBB_10s.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histo_BBB.mp4
-
-
-
-https://trac.ffmpeg.org/wiki/Histogram
-
-
