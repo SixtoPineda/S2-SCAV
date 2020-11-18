@@ -32,7 +32,7 @@
 
 <p align="center"> Link resultado del video (Mi Youtube): https://youtu.be/-1ttAqNjws4</p>
 
-<p align="justify">En el resultado vemos el histograma de las tres componentes de YUV (Y, Cb y Cr). Donde Y nos informa sobre la luminancia, es decir información en blanco y negro, por esa razón la barra de color debajo del histograma que representa la Y esta en escala de grises. Vemos también el histograma de las componentes Cb y Cr, que hacen referencia a la crominancia, es decir, la información sobre el color. </p>
+<p align="justify">En el resultado vemos el histograma de las tres componentes de YUV (Y, Cb y Cr). Donde Y nos informa sobre la luminancia, es decir información en blanco y negro, por esa razón la barra de color debajo del histograma que representa la Y está en escala de grises. Vemos también el histograma de las componentes Cb y Cr, que hacen referencia a la crominancia, es decir, la información sobre el color. </p>
 
 ### EJERCICIO-3
 #### ***Resize the BBB(10s) video***
@@ -56,7 +56,7 @@
 ### EJERCICIO-4
 #### ***Audio mono y diferente audio codec***
 
-<p align="justify">Para realizar este ejercicio, nuevamente ejecutaremos dos comandos usando <em>ffmpeg</em> para cambiar el tipo de canal de audio a mono y posteriormente cambiar el tipo de codificación del audio original. Para ello, tal y como vemos a continuación en las capturas de pantalla, el audio del video original es de tipo multicanal, en este caso 5.1 surround lo cual significa que usa 6 canales de audio. De igual forma también podemos ver que se usa <em>acc</em> como codec del audio. Para pasar el audio del video a mono, realicé el siguiente comando encontrado en la própia página de <em>FFmpeg</em>:</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -ac <strong>1</strong> monoBBB10s.mp4</em></p><p align="justify">Del mismo modo, una vez hecho esto procedí a realizar el cambio de codec del audio, para ello usé el comando encontrado en una conversación en la página <em>StackExchange</em>:</p><p align="center"><em>ffmpeg -i monoBBB10s.mp4 -acodec <strong>mp3</strong> -vcodec copy mono_mp3_BBB10s.mp4</em></p>
+<p align="justify">Para realizar este ejercicio, nuevamente ejecutaremos dos comandos usando <em>ffmpeg</em> para cambiar el tipo de canal de audio a mono y posteriormente cambiar el tipo de codificación del audio original. Para ello, tal y como vemos a continuación en las capturas de pantalla, el audio del video original es de tipo multicanal, en este caso 5.1 Surround lo cual significa que usa 6 canales de audio. De igual forma también podemos ver que se usa <em>acc</em> como codec del audio. Para pasar el audio del video a mono, realicé el siguiente comando encontrado en la propia página de <em>FFmpeg</em>:</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -ac <strong>1</strong> monoBBB10s.mp4</em></p><p align="justify">Del mismo modo, una vez hecho esto procedí a realizar el cambio de codec del audio, para ello usé el comando encontrado en una conversación en la página <em>StackExchange</em>:</p><p align="center"><em>ffmpeg -i monoBBB10s.mp4 -acodec <strong>mp3</strong> -vcodec copy mono_mp3_BBB10s.mp4</em></p>
 
 
 <p align="justify">Fuentes:<br>Pasar a mono: https://trac.ffmpeg.org/wiki/AudioChannelManipulation<br>Cambiar audio codec: https://superuser.com/questions/215430/would-like-to-change-audio-codec-but-keep-video-settings-with-ffmpeg</p>
@@ -95,7 +95,7 @@
 <p align="center"> Link resultado del video con canal audio mono (Mi Youtube): https://youtu.be/WYFJUyrX-4A</p>
 <p align="center"> Link resultado del video con canal audio mono y diferente audio codec (MP3) (Mi Youtube): https://youtu.be/wAuYziIrgJw</p>
 
-<p align="justify">Como podemos escuchar, si comparamos el video original con el que tiene un único canal, se aprecia claramente con auriculares como se pierde esa sensación espacial que nos da el audio multicanal 5.1 surround que tenia el video original, como hemos podido ver en la captura de las propiedades el video.<br>En cambiar también el tipo de codificación del audio, las diferencias apenas son notorias.</p>
+<p align="justify">Como podemos escuchar, si comparamos el video original con el que tiene un único canal, se aprecia claramente con auriculares como se pierde esa sensación espacial que nos da el audio multicanal 5.1 Surround que tenía el video original, como hemos podido ver en la captura de las propiedades el video.<br>En cambiar también el tipo de codificación del audio, las diferencias apenas son notorias.</p>
 
 
 ### EJERCICIO-5
@@ -119,7 +119,7 @@ time_video = '00:00:10.0'
 subprocess.run(f"ffmpeg -ss {time_start} -i EJERCICIO-5/{NOV}.mp4 -c copy -t {time_video} EJERCICIO-5/{NOV}_10s.mp4", shell=True)
 
 ```
-<p align="justify">En el segundo ejericio, tan solo procesamos el comando a partir del video resultante del ejercicio 1. </p>
+<p align="justify">En el segundo ejercicio, tan solo procesamos el comando a partir del video resultante del ejercicio 1. </p>
 
 ```python
 
@@ -128,7 +128,7 @@ subprocess.run(f"ffmpeg -ss {time_start} -i EJERCICIO-5/{NOV}.mp4 -c copy -t {ti
 subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -vf split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay EJERCICIO-5/YUVhisto_{NOV}.mp4", shell=True)
 
 ```
-<p align="justify">Para el ejericio 3, creamos dos variables:<br><strong><em>- ScaleValue:</em></strong> Una array que contiene todos los distintos tipos de escala que queremos realizar.<br><strong><em>- nameVideo:</em></strong> Para colocar el nombre correspondiente al fichero final después de hacer el escalado del video. </p>
+<p align="justify">Para el ejercicio 3, creamos dos variables:<br><strong><em>- ScaleValue:</em></strong> Una array que contiene todos los distintos tipos de escala que queremos realizar.<br><strong><em>- nameVideo:</em></strong> Para colocar el nombre correspondiente al fichero final después de hacer el escalado del video. </p>
 
 ```python
 
@@ -141,7 +141,7 @@ for i in range(len(scaleValue)):
     subprocess.run(f"ffmpeg -i EJERCICIO-5/{NOV}_10s.mp4 -vf scale={scaleValue[i]} EJERCICIO-5/{NOV}_{nameVideo[i]}.mp4 ", shell=True)
 
 ```
-<p align="justify">Para el ejericio 4, tan solo ejecutamos primero el comadno para pasar de audio multicanal a mono y posteriormente cambiamos el codec del audio a mp3.</p>
+<p align="justify">Para el ejercicio 4, tan solo ejecutamos primero el comando para pasar de audio multicanal a mono y posteriormente cambiamos el codec del audio a mp3.</p>
 
 ```python
 
