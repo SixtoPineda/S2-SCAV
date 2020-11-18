@@ -14,29 +14,23 @@
 
 ##### **Resultados**
 
-
 <p align="center"> Link resultado del video (Mi Youtube): https://youtu.be/WndicksBocw</p>
-
 
 <p align="justify">En el video final podemos ver que dura 10 segundos y que hace referencia al minuto 00:07:05 del video original. </p>
 
 ### EJERCICIO-2
 #### ***Resize Images***
 
-<p align="justify">Dado que había que hacer un <em>resize</em>, con el fin de reducir la calidad, busqué un comando para poder acceder a <em>ffmpeg</em> desde el terminal y poder aplicar una reducción de tamaño de una imagen y así obtener el resultado pedido. Para ello usé el comando encontrado en la página de <em><strong>FFmpeg:</strong></em> <em>https://trac.ffmpeg.org/wiki/Scaling</em> -> "<em>ffmpeg-i original.png -vf scale=100:100 original_100x100.png</em>"</p>
-<p align="justify">A continuación muestro los resultados. Yo decidí redimensionar la imagen a un tamaño de 100x100, asegurándome una reducción de calidad.</p>
+<p align="justify">Nuevamente mediante un comando usando <em>ffmpeg</em> procedemos a realizar el histograma YUV y plotearlo sobre la misma imagen o video. Para ello utilicé el comando dado por la misma página de <em>FFmpeg</em>:</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histo_BBB.mp4</em></p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/Histogram</p>
 
 ##### **Comando + Terminal**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-2/comandos_ejercicio_2.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-2/histo_BBB.png" width="400"/>
 </p>
 
 ##### **Resultados**
 
-<p align="center">
-  <img src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-2/original.png" width="500">
-  <img src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-2/original_100x100.png" width="250">
-</p>
+<p align="center"> Link resultado del video (Mi Youtube): https://youtu.be/-1ttAqNjws4</p>
 
 <p align="justify">En el resultado claramente se ve como la imagen final (derecha) tiene una peor calidad, hemos bajado su resolución.</p>
 
