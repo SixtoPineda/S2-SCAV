@@ -41,7 +41,7 @@
 
 ##### **Comando + Terminal**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
 </p>
 
 ##### **Resultados**
@@ -56,29 +56,34 @@
 ### EJERCICIO-4
 #### ***Run-lenght encoding***
 
-<p align="justify">La codificación de Run-length consiste en detectar los distintos símbolos que aparecen en una serie de bytes y saber cuántas veces aparece cada uno de ellos.<br>Al crear la función, le pasaremos una string con una série de símbolos. A partir de aquí, mediante <em>ollections.OrderedDict.fromkeys(string, 0)</em> procedemos a crear un diccionario con una lista de todos los símbolos que aparecen en la string. Hecho esto pasamos a ver cuántas veces aparece cada uno de esos símbolos de la lista en la string pasada a la función.<br>Por último procedemos a crear el output donde colocaremos el símbolo junto con un valor que hará referencia al número de veces que aparece en la string pasada a la función.</p> <p align="justify">Fuentes:<br>https://www.geeksforgeeks.org/run-length-encoding-python/<br>https://www.tutorialspoint.com/run-length-encoding-in-python</p>
+<p align="justify"></p> <p align="justify">Fuentes:<br>Pasar a mono: https://trac.ffmpeg.org/wiki/AudioChannelManipulation<br>Cambiar audio codec: https://superuser.com/questions/215430/would-like-to-change-audio-codec-but-keep-video-settings-with-ffmpeg</p>
 
-```python
-import collections
 
-def run_length_encoding(string):
-   dicc = collections.OrderedDict.fromkeys(string, 0)
-   for char in string:
-      # + 1 cada vez que aparece ese carcater en la string
-      dicc[char] += 1
-   encoded_string = ""
-   # recorremos el diccionario según el símbolo (key) y el número de veces que aparece (value)
-   for key, value in dicc.items():
-       # pasamos el enetero(int) a tipo string(str) para crear el output con la string resultante
-      encoded_string += key + str(value) # Ejemplo: dicc = "{'w':4}" output = w4
+##### **Comando + Terminal**
+<p align="center">
+   Pasamos a mono
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarAMono.png" width="600"/>
+   Cambiamos audio codec a mp3
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarA-MP3.png" width="600"/>
+</p>
 
-   return (encoded_string)
+##### **Antes y después de cambiar tipo de canal y codificación del audio**
+###### **Antes**
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
+</p>
+###### **Después**
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
+</p>
+##### **Resultados**
 
-```
-![](https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-4/result.png)
-> Resultado.
+<p align="center"> Video con audio original (Mi Youtube): https://youtu.be/WndicksBocw</p>
+<p align="center"> Link resultado del video con canal audio mono (Mi Youtube): https://youtu.be/-zjsgdHLAMk</p>
+<p align="center"> Link resultado del video con canal audio mono y diferente audio codec (MP3) (Mi Youtube): https://youtu.be/qdyaH8BuRuA</p>
 
-<p align="justify">En el resultado podemos ver como cada vez que aparece un símbolo en la string, este se muestra en el resultado final junto con un valor entero, que hace referencia al número de veces que aparece dicho símbolo en la string.</p>
+<p align="justify">Como podemos escuchar, si comparamos el video original con el que tiene un único canal, se aprecia claramente con auriculares como se pierde esa sensación espacial que nos da el audio multicanal 5.1 surround que tenia el video original, como hemos podido ver en la captura de las propiedades el video.<br>En cambiar también el tipo de codificación del audio, las diferencias apenas son notorias.</p>
+
 
 ### EJERCICIO-5
 #### ***DCT***
