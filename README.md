@@ -59,14 +59,6 @@
 <p align="justify"></p> <p align="justify">Fuentes:<br>Pasar a mono: https://trac.ffmpeg.org/wiki/AudioChannelManipulation<br>Cambiar audio codec: https://superuser.com/questions/215430/would-like-to-change-audio-codec-but-keep-video-settings-with-ffmpeg</p>
 
 
-##### **Comando + Terminal**
-<p align="center">
-   Pasamos a mono
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarAMono.png" width="600"/>
-   Cambiamos audio codec a mp3
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarA-MP3.png" width="600"/>
-</p>
-
 ##### **Antes y después de cambiar tipo de canal y codificación del audio**
 ###### **Antes**
 <p align="center">
@@ -78,6 +70,21 @@
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
 </p>
+
+##### **Comandos**
+
+###### **Pasamos a mono**
+
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarAMono.png" width="600"/>
+</p>
+
+###### **Cambiamos audio codec a mp3**   
+   
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarA-MP3.png" width="600"/>
+</p>
+
 
 ##### **Resultados**
 
