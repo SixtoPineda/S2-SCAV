@@ -54,9 +54,12 @@
 <p align="justify">Como podemos ver en los distintos videos, a medida que reducimos la resolución de éstos, la calidad también lo hace.</p>
 
 ### EJERCICIO-4
-#### ***Run-lenght encoding***
+#### ***Audio mono y diferente audio codec***
 
-<p align="justify"></p> <p align="justify">Fuentes:<br>Pasar a mono: https://trac.ffmpeg.org/wiki/AudioChannelManipulation<br>Cambiar audio codec: https://superuser.com/questions/215430/would-like-to-change-audio-codec-but-keep-video-settings-with-ffmpeg</p>
+<p align="justify">Para realizar este ejercicio, nuevamente ejecutaremos dos comandos usando <em>ffmpeg</em> para cambiar el tipo de canal de audio a mono y posteriormente cambiar el tipo de codificación del audio original. Para ello, tal y como vemos a continuación en las capturas de pantalla, el audio del video original es de tipo multicanal, en este caso 5.1 surround lo cual significa que usa 6 canales de audio. De igual forma también podemos ver que se usa <em>acc</em> como codec del audio. Para pasar el audio del video a mono, realicé el siguiente comando encontrado en la própia página de <em>FFmpeg</em>:</p><p align="center"><em>ffmpeg -i BBB_10s.mp4 -ac <strong>1</strong> monoBBB10s.mp4</em></p><p align="justify">Del mismo modo, una vez hecho esto procedí a realizar el cambio de codec del audio, para ello usé el comando encontrado en una conversación en la página <em>StackExchange</em>:</p><p align="center"><em>ffmpeg -i monoBBB10s.mp4 -acodec <strong>mp3</strong> -vcodec copy mono_mp3_BBB10s.mp4</em></p>
+
+
+<p align="justify">Fuentes:<br>Pasar a mono: https://trac.ffmpeg.org/wiki/AudioChannelManipulation<br>Cambiar audio codec: https://superuser.com/questions/215430/would-like-to-change-audio-codec-but-keep-video-settings-with-ffmpeg</p>
 
 
 ##### **Antes y después de cambiar tipo de canal y codificación del audio**
