@@ -32,7 +32,7 @@
 
 <p align="center"> Link resultado del video (Mi Youtube): https://youtu.be/-1ttAqNjws4</p>
 
-<p align="justify">En el resultado claramente se ve como la imagen final (derecha) tiene una peor calidad, hemos bajado su resolución.</p>
+<p align="justify">En el resultado vemos el histograma de las tres componentes de YUV (Y, Cb y Cr). Donde Y nos informa sobre la luminancia, es decir información en blanco y negro, por esa razón la barra de color debajo del histograma que representa la Y esta en escala de grises. Vemos también el histograma de las componentes Cb y Cr, que hacen referencia a la crominancia, es decir, la información sobre el color. </p>
 
 ### EJERCICIO-3
 #### ***Image into b/w***
