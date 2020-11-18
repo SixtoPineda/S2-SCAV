@@ -5,7 +5,7 @@
 ### EJERCICIO-1
 #### ***Cut video (10s)***
 
-<p align="justify">Con el fin de recortar el video 10 segundos procedí a ejecutar un comando desde el terminal usando <em>ffmpeg</em>. Este comando lo encontré en la página de <em>VIDAGNU</em>:</p><p align="center"><em>ffmpeg -ss 00:07:05.0 -i BBB.mp4 -c copy -t 00:00:10.0 BBB_10s.mp4</em></p><p align="justify">Donde asignamos que en el minuto 7 y segundo 5 empezamos a reproducir el video durante 10 segundos. El resultado de dicho video de diez segundos lo guardamos en el video-output (BBB_10s.mp4). De esta forma obtenemos un corte de 10 segundos del video original justo a partir del minuto 00:07:05.</p><p align="justify">Fuente:<br>https://www.vidagnu.com/como-recortar-o-tomar-una-porcion-de-un-video-con-ffmpeg-en-linux/</p>
+<p align="justify">Con el fin de recortar el video 10 segundos procedí a ejecutar un comando desde el terminal usando <em>ffmpeg</em>. Este comando lo encontré en la página de <em>VIDAGNU</em>:</p><p align="center"><em>ffmpeg -ss 00:<strong>07:05.0</strong> -i BBB.mp4 -c copy -t 00:00:<strong>10.0</strong> BBB_10s.mp4</em></p><p align="justify">Donde asignamos que en el minuto 7 y segundo 5 empezamos a reproducir el video durante 10 segundos. El resultado de dicho video de diez segundos lo guardamos en el video-output (BBB_10s.mp4). De esta forma obtenemos un corte de 10 segundos del video original justo a partir del minuto 00:07:05.</p><p align="justify">Fuente:<br>https://www.vidagnu.com/como-recortar-o-tomar-una-porcion-de-un-video-con-ffmpeg-en-linux/</p>
 
 ##### **Comando + Terminal**
 <p align="center">
