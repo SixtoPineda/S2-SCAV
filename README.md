@@ -3,41 +3,22 @@
 ## **EJERCICIOS**
 
 ### EJERCICIO-1
-#### ***RGB-&-YUV***
+#### ***Cut video (10s)***
 
-<p align="justify">Para realizar este ejercicio me basé en los cálculos propuestos por la diapositiva 40 de la teoria 2 sobre MPEG y MPEG-2.<br>
-Únicamente pasamos el valor RGB o YUV a la función, según la conversión que queramos realizar y dentro realizamos los cálculos necesarios para obtener la conversión correctamente. Finalmente las funciones devuelven la array con el resultado correspondiente.</p>
+<p align="justify">Con el fin de recortar el video 10 segundos procedí a ejecutar un comando desde el terminal usando <em>ffmpeg</em>. Este comando lo encontré en la página de <em>VIDAGNU</em>:<br><em>ffmpeg -ss 00:07:05.0 -i BBB.mp4 -c copy -t 00:00:10.0 BBB_10s.mp4</em>.<br>Donde asignamos que en el minuto 7 y segundo 5 empezamos a reproducir el video durante 10 segundos. El resultado de dicho video de diez segundos lo guardamos en el video-output (BBB_10s.mp4). De esta forma obtenemos un corte de 10 segundos del video original justo a partir del minuto 00:07:05.</p><p align="justify">Fuente:<br>https://www.vidagnu.com/como-recortar-o-tomar-una-porcion-de-un-video-con-ffmpeg-en-linux/</p>
 
+##### **Comando + Terminal**
 <p align="center">
-  <img src="https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-1/rgb_yuv.png" width="600" title="Diapo 40, teoría 2 (MPEG y MPEG-2)">
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-1/BBB_10s.png" width="400"/>
 </p>
 
-```python
-import numpy as np
+##### **Resultados**
+<p align="center">
+  <video src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-1/BBB_10s.mp4" width="600" >
+</p>
 
-def RGB2YUV(rgb):
 
-    #sacado de la diapositiva 40 de la teoria T2 MPEG y MPEG-2
-    Y =  0.257 * rgb[0] + 0.504 * rgb[1] + 0.098 * rgb[2] +  16
-    U = -0.148 * rgb[0] - 0.291 * rgb[1] + 0.439 * rgb[2] + 128
-    V =  0.439 * rgb[0] - 0.368 * rgb[1] - 0.071 * rgb[2] + 128
-
-    return Y,U,V
-
-def  YUV2RGB(yuv):
-
-    #sacado de la diapositiva 40 de la teoria T2 MPEG y MPEG-2
-    r =  1.164 * (yuv[0] - 16) + 2.018 * (yuv[1] - 128)
-    g =  1.164 * (yuv[0] - 16) - 0.813 * (yuv[2] - 128) - 0.391 * (yuv[1] - 128)
-    b =  1.164 * (yuv[0] - 16) + 1.596 * (yuv[2] - 128)
-
-    return rgb
-
-```
-![](https://github.com/SixtoPineda/P1-SCAV/blob/main/EJERCICIO-1/result.png)
-> Resultado.
-
-<p align="justify">Como podemos ver en el resultado, el proceso es correcto, puesto que en pasar de RGB a YUV obtenemos unos valores que en realizar la función inversa obtenemos el valor RGB previamente creado.</p>
+<p align="justify">En el video final podemos ver que dura 10 segundos y que hace referencia al minuto 00:07:05 del video original. </p>
 
 ### EJERCICIO-2
 #### ***Resize Images***
