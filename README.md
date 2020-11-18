@@ -9,7 +9,7 @@
 
 ##### **Comando + Terminal**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-1/BBB_10s.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-1/BBB_10s.png" width="600"/>
 </p>
 
 ##### **Resultados**
@@ -25,7 +25,7 @@
 
 ##### **Comando + Terminal**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-2/histo_BBB.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-2/histo_BBB.png" width="600"/>
 </p>
 
 ##### **Resultados**
