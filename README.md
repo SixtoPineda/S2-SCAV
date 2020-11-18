@@ -62,13 +62,13 @@
 ##### **Antes y después de cambiar tipo de canal y codificación del audio**
 ###### **Antes**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/ver_audio_codec_original.png" width="800"/>
 </p>
 
 ###### **Después**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-3/1280x720.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/result_final.png" width="800"/>
 </p>
 
 ##### **Comandos**
@@ -76,13 +76,13 @@
 ###### **Pasamos a mono**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarAMono.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarAMono.png" width="800"/>
 </p>
 
 ###### **Cambiamos audio codec a mp3**   
    
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarA-MP3.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/S2-SCAV/blob/main/EJERCICIO-4/pasarA-MP3.png" width="800"/>
 </p>
 
 
